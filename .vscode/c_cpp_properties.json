@@ -4,11 +4,14 @@
             "name": "windows-gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include"
+                "${workspaceFolder}/include/",
+                "${workspaceFolder}/include/glad/",
+                "${workspaceFolder}/include/GLFW/",
+                "${workspaceFolder}/include/KHR/"
             ],
             "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
             "cStandard": "${default}",
-            "cppStandard": "${default}",
+            "cppStandard": "c++23",
             "intelliSenseMode": "windows-gcc-x64",
             "compilerArgs": [
                 ""
