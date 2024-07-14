@@ -14,7 +14,7 @@
                 "${workspaceFolder}/src/glad.c",
                 "-lglfw3dll",
                 "-o",
-                "${workspaceFolder}/Physics-Engine.exe"
+                "${workspaceFolder}/src/output/Physics-Engine.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

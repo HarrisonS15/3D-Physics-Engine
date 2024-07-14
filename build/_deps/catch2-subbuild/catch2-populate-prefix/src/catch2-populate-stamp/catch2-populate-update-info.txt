@@ -1,0 +1,7 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The patch step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+command (connected)=C:/CMake/bin/cmake.exe;-Dcan_fetch=YES;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-gitupdate.cmake
+command (disconnected)=C:/CMake/bin/cmake.exe;-Dcan_fetch=NO;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp/catch2-populate-gitupdate.cmake
+work_dir=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src

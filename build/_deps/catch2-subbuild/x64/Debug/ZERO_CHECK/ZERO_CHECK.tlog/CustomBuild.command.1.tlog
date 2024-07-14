@@ -1,0 +1,10 @@
+^C:\USERS\OWNER\DESKTOP\PROJECTS\3D-PHYSICS-ENGINE\BUILD\_DEPS\CATCH2-SUBBUILD\CMAKEFILES\DD5F9F2590F15DD1CF8D2C4B5496F81D\GENERATE.STAMP.RULE
+setlocal
+C:\CMake\bin\cmake.exe -SC:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild -BC:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild/catch2-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

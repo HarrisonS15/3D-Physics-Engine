@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-subbuild\CMakeFiles\dd5f9f2590f15dd1cf8d2c4b5496f81d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{018CB524-F6AB-36F3-A77F-0A636D199437}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

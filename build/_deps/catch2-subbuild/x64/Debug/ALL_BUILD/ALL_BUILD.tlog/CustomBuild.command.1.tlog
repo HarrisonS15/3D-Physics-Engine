@@ -1,0 +1,10 @@
+^C:\USERS\OWNER\DESKTOP\PROJECTS\3D-PHYSICS-ENGINE\BUILD\_DEPS\CATCH2-SUBBUILD\CMAKELISTS.TXT
+setlocal
+C:\CMake\bin\cmake.exe -SC:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild -BC:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild --check-stamp-file C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

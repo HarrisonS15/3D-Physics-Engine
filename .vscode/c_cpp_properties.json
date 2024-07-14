@@ -7,9 +7,9 @@
                 "${workspaceFolder}/include/",
                 "${workspaceFolder}/include/glad/",
                 "${workspaceFolder}/include/GLFW/",
-                "${workspaceFolder}/include/KHR/"
+                "${workspaceFolder}/include/KHR/",
+                "${workspaceFolder}/src/"
             ],
-            "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
             "cStandard": "${default}",
             "cppStandard": "c++23",
             "intelliSenseMode": "windows-gcc-x64",
