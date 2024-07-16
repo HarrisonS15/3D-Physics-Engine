@@ -18,3 +18,10 @@ My journey learning to create a 3D physics engine from scratch in C++
 
 ### Notes
 - coordinates that we specify in OpenGL are in 3D (x, y and z coordinate).
+- Commands to remember
+  - cmake -S . -B build
+    - recompiles cmake
+  - cmake --build build
+    - builds cmake
+  - ctest (from build dir)
+    - runs all tests
