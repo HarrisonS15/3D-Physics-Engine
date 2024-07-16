@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/CMake/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake
+C:/CMake/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake
+C:/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake
+C:/CMake/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake
+C:/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake
+C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/CMake/CatchMiscFunctions.cmake
+C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/src/CMakeLists.txt
+C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/src/catch2/catch_user_config.hpp.in

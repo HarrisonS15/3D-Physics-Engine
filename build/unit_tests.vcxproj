@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -106,18 +106,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\CMake\bin\cmake.exe -D TEST_TARGET=unit_tests -D TEST_EXECUTABLE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=unit_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/unit_tests-b12d07c_tests.cmake -P C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/extras/CatchAddTests.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>Debug\phys_eng.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Debug\phys_eng.lib;_deps\catch2-build\src\Debug\Catch2Maind.lib;_deps\catch2-build\src\Debug\Catch2d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -132,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -153,18 +165,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\CMake\bin\cmake.exe -D TEST_TARGET=unit_tests -D TEST_EXECUTABLE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Release/unit_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=unit_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/unit_tests-b12d07c_tests.cmake -P C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/extras/CatchAddTests.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>Release\phys_eng.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Release\phys_eng.lib;_deps\catch2-build\src\Release\Catch2Main.lib;_deps\catch2-build\src\Release\Catch2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -179,7 +203,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -200,18 +224,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\CMake\bin\cmake.exe -D TEST_TARGET=unit_tests -D TEST_EXECUTABLE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/MinSizeRel/unit_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=unit_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/unit_tests-b12d07c_tests.cmake -P C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/extras/CatchAddTests.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>MinSizeRel\phys_eng.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>MinSizeRel\phys_eng.lib;_deps\catch2-build\src\MinSizeRel\Catch2Main.lib;_deps\catch2-build\src\MinSizeRel\Catch2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -226,7 +262,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -246,18 +282,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\..;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\generated-includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\CMake\bin\cmake.exe -D TEST_TARGET=unit_tests -D TEST_EXECUTABLE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/RelWithDebInfo/unit_tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=unit_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/unit_tests-b12d07c_tests.cmake -P C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/extras/CatchAddTests.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>RelWithDebInfo\phys_eng.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>RelWithDebInfo\phys_eng.lib;_deps\catch2-build\src\RelWithDebInfo\Catch2Main.lib;_deps\catch2-build\src\RelWithDebInfo\Catch2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -283,7 +331,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\ParseAndAddCatchTests.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\extras\Catch.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\FindCatch2.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/CMakeLists.txt</Message>
@@ -296,7 +344,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\ParseAndAddCatchTests.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\extras\Catch.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\FindCatch2.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/CMakeLists.txt</Message>
@@ -309,7 +357,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\ParseAndAddCatchTests.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\extras\Catch.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\FindCatch2.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/CMakeLists.txt</Message>
@@ -322,7 +370,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\ParseAndAddCatchTests.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.30\Modules\CTest.cmake;C:\CMake\share\cmake-3.30\Modules\CTestTargets.cmake;C:\CMake\share\cmake-3.30\Modules\CTestUseLaunchers.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\DartConfiguration.tcl.in;C:\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeCXXCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeRCCompiler.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\3.30.0\CMakeSystem.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\extras\Catch.cmake;C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\cmake\FindCatch2.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -338,6 +386,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\src\Catch2.vcxproj">
+      <Project>{8d538cbe-01bf-4a2e-a98a-6c368fdf13d7}</Project>
+      <Name>Catch2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-build\src\Catch2WithMain.vcxproj">
+      <Project>{8bd3552a-2cfb-4a59-ab15-2031b97ada1e}</Project>
+      <Name>Catch2WithMain</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\phys_eng.vcxproj">
       <Project>{D687F305-901C-3CFA-8919-A45F5FA8944E}</Project>

@@ -1,0 +1,19 @@
+Start testing: Jul 16 19:27 Eastern Daylight Time
+----------------------------------------------------------
+1/1 Testing: test/Main
+1/1 Test: test/Main
+Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "test/Main"
+Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
+"test/Main" start time: Jul 16 19:27 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+test/Main
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"test/Main" end time: Jul 16 19:27 Eastern Daylight Time
+"test/Main" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 16 19:27 Eastern Daylight Time

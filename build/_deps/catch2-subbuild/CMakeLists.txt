@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(catch2-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/catchorg/Catch2.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v3.4.0"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/catchorg/Catch2.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_SHALLOW" "TRUE" "GIT_TAG" "v3.6.0"
                     SOURCE_DIR          "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src"
                     BINARY_DIR          "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-build"
                     CONFIGURE_COMMAND   ""

@@ -36,7 +36,7 @@ set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "C:/Program Files/Git/cmd/git.exe"
-            clone --no-checkout --config "advice.detachedHead=false" "https://github.com/catchorg/Catch2.git" "catch2-src"
+            clone --no-checkout --depth 1 --no-single-branch --config "advice.detachedHead=false" "https://github.com/catchorg/Catch2.git" "catch2-src"
     WORKING_DIRECTORY "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
@@ -52,13 +52,13 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe"
-          checkout "v3.4.0" --
+          checkout "v3.6.0" --
   WORKING_DIRECTORY "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: 'v3.4.0'")
+  message(FATAL_ERROR "Failed to checkout tag: 'v3.6.0'")
 endif()
 
 set(init_submodules TRUE)

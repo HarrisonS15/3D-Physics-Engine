@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\catch2\internal\catch_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\_deps\catch2-src\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9EB50FF9-9C18-35F1-9294-8A7F5336DF64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

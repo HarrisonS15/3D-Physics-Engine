@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/CMake/share/cmake-3.30/Modules/CMakeDependentOption.cmake
+C:/CMake/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake
+C:/CMake/share/cmake-3.30/Modules/GNUInstallDirs.cmake
+C:/CMake/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/CMake/CatchConfigOptions.cmake
+C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/CMakeLists.txt
