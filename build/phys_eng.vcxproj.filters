@@ -6,6 +6,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\objects.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>

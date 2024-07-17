@@ -280,8 +280,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\objects.hpp" />
     <ClCompile Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\GUI.cpp" />
+    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\exceptions.hpp" />
+    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\objects.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\build\ZERO_CHECK.vcxproj">

@@ -376,7 +376,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test\main.cpp" />
     <ClCompile Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test\test_objects.cpp" />
     <ClCompile Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\test\test_GUI.cpp" />
   </ItemGroup>

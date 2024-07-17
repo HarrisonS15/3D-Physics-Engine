@@ -5,14 +5,23 @@ include_directories(include src)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-include(CTest)
+
 enable_testing()
 
 cmake_policy(SET CMP0110 NEW)
 
+file(GLOB SOURCE_FILES 
+    "${CMAKE_SOURCE_DIR}/src/GUI.cpp"
+    "${CMAKE_SOURCE_DIR}/src/*.hpp"
+)
+
+file(GLOB TEST_FILES 
+    "${CMAKE_SOURCE_DIR}/test/*.cpp"
+    "${CMAKE_SOURCE_DIR}/test/*.hpp"
+)
+
 add_library(phys_eng 
-    src/objects.hpp
-    src/GUI.cpp
+    ${SOURCE_FILES}
 )
 
 target_include_directories(phys_eng  
@@ -30,7 +39,6 @@ target_link_libraries(src_main
 )
 
 add_executable(unit_tests
-    test/main.cpp
     test/test_objects.cpp
     test/test_GUI.cpp
 )
@@ -48,6 +56,7 @@ target_link_libraries(unit_tests
         Catch2::Catch2WithMain
  )
 
+ include(CTest)
  include(Catch)
 
  catch_discover_tests(unit_tests)
