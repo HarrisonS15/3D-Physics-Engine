@@ -8,4 +8,6 @@ add_test( [==[Test Line length]==] C:/Users/Owner/Desktop/Projects/3D-Physics-En
 set_tests_properties( [==[Test Line length]==] PROPERTIES WORKING_DIRECTORY C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build)
 add_test( [==[Test Line getCenterOfLine]==] C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe [==[Test Line getCenterOfLine]==]  )
 set_tests_properties( [==[Test Line getCenterOfLine]==] PROPERTIES WORKING_DIRECTORY C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build)
-set( unit_tests_TESTS [==[Test Vertex Constructor]==] [==[Test Vertex getMidPoint]==] [==[Test Line Constructor]==] [==[Test Line length]==] [==[Test Line getCenterOfLine]==])
+add_test( [==[Test multiple files]==] C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe [==[Test multiple files]==]  )
+set_tests_properties( [==[Test multiple files]==] PROPERTIES WORKING_DIRECTORY C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build)
+set( unit_tests_TESTS [==[Test Vertex Constructor]==] [==[Test Vertex getMidPoint]==] [==[Test Line Constructor]==] [==[Test Line length]==] [==[Test Line getCenterOfLine]==] [==[Test multiple files]==])

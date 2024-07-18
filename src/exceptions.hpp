@@ -1,3 +1,5 @@
+#ifndef CUSTOM_EXCEPTIONS_
+#define CUSTOM_EXCEPTIONS_
 #include <iostream>
 
 class VerticeException : public std::exception {
@@ -7,3 +9,4 @@ char * what () {
         return "Wrong number of vertices for shape.";
     }
 };
+#endif

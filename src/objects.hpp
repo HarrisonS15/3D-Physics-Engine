@@ -1,3 +1,6 @@
+#ifndef CUSTOM_OBJECTS_
+#define CUSTOM_OBJECTS_
+
 #include <iostream>
 #include <vector>
 #include <math.h>
@@ -104,3 +107,4 @@ class Triangle : Object2D {
 
 
 };
+#endif

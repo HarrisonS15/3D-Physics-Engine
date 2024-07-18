@@ -1,41 +1,12 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "C/C++ Runner: Debug Session",
-            "type": "cppdbg",
-            "request": "launch",
-            "args": [],
-            "stopAtEntry": false,
-            "externalConsole": true,
-            "cwd": "c:/Users/Owner/Desktop/Projects/3D-Physics-Engine",
-            "program": "c:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/outDebug",
-            "MIMode": "gdb",
-            "miDebuggerPath": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-        {
-            "name": "(Windows) Launch",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "externalTerminal"
-        },
+        
         {
             "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/src/output/Physics-Engine.exe",
+            "program": "C:\\Users\\Owner\\Desktop\\Projects\\3D-Physics-Engine\\build\\Debug\\src_main.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "C:/msys64/ucrt64/bin",

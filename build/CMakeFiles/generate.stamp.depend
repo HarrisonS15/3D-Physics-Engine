@@ -1,4 +1,5 @@
 # CMake generation dependency list for this directory.
+C:/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake
 C:/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake
 C:/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake
 C:/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake
@@ -11,6 +12,7 @@ C:/CMake/share/cmake-3.30/Modules/CTest.cmake
 C:/CMake/share/cmake-3.30/Modules/CTestTargets.cmake
 C:/CMake/share/cmake-3.30/Modules/CTestUseLaunchers.cmake
 C:/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/CMake/share/cmake-3.30/Modules/Compiler/MSVC-C.cmake
 C:/CMake/share/cmake-3.30/Modules/Compiler/MSVC-CXX.cmake
 C:/CMake/share/cmake-3.30/Modules/Compiler/MSVC.cmake
 C:/CMake/share/cmake-3.30/Modules/DartConfiguration.tcl.in
@@ -21,13 +23,16 @@ C:/CMake/share/cmake-3.30/Modules/FindGit.cmake
 C:/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake
 C:/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake
 C:/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake
+C:/CMake/share/cmake-3.30/Modules/Platform/Windows-MSVC-C.cmake
 C:/CMake/share/cmake-3.30/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/CMake/share/cmake-3.30/Modules/Platform/Windows-MSVC.cmake
 C:/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake
 C:/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake
 C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/CMakeLists.txt
+C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/CMakeFiles/3.30.0/CMakeCCompiler.cmake
 C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/CMakeFiles/3.30.0/CMakeCXXCompiler.cmake
 C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/CMakeFiles/3.30.0/CMakeRCCompiler.cmake
 C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/CMakeFiles/3.30.0/CMakeSystem.cmake
 C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/_deps/catch2-src/extras/Catch.cmake
 C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/cmake/FindCatch2.cmake
+C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/cmake/FindGLFW3.cmake

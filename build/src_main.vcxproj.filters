@@ -6,9 +6,26 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\include\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\GUI.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\src\objects.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="C:\Users\Owner\Desktop\Projects\3D-Physics-Engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{868FC509-9E21-376E-BB63-9CCF9E1F2B43}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{9EB50FF9-9C18-35F1-9294-8A7F5336DF64}</UniqueIdentifier>
     </Filter>
