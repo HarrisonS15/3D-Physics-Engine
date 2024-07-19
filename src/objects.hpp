@@ -10,42 +10,101 @@ using std::vector;
 
 struct Vertex {
     public:
-        double x, y, z;
+        
         Vertex() {
             x = 0.0;
             y = 0.0;
             z = 0.0;
         }
+
         Vertex(double x, double y, double z) {
             this->x = x;
             this->y = y;
             this->z = z;
         }
+
         Vertex getMidPoint(Vertex v2) {
             return Vertex((x + v2.x)/2, (y + v2.y)/2, (z + v2.z)/2);
         }
+
+        double getX() {
+            return x;
+        }
+
+        double getY() {
+            return y;
+        }
+
+        double getZ() {
+            return z;
+        }
+
+        void setX(double x) {
+            this->x = x;
+        }
+
+        void setY(double y) {
+            this->y = y;
+        }
+
+        void setZ(double z) {
+            this->z = z;
+        }
+
+    private:
+        double x, y, z;
 };
 
 struct Line {
     public:
-        Vertex a, b;
-        double length;
+        
         Line() {
-
+            a = Vertex(0, 0, 0);
+            b = Vertex(0, 0, 0);
         } 
+
         Line(Vertex a, Vertex b) {
             this->a = a;
             this->b = b;
-            length = calcLength();
         }
 
         Vertex getCenterOfLine() {
             return a.getMidPoint(b);
         }
+
+        Vertex getVertexA() {
+            return a;
+        }
+
+        Vertex getVertexB() {
+            return b;
+        }
+
+        void setVertexA(Vertex a) {
+            this->a = a;
+        }
+
+        void setVertexA(double x, double y, double z) {
+            a = Vertex(x,y,z);
+        }
+
+        void setVertexB(Vertex b) {
+            this->b = b;
+        }
+
+        void setVertexB(double x, double y, double z) {
+            b = Vertex(x,y,z);
+        }
+
+        double getLength() {
+            return calcLength();
+        }
     
     private:
+        Vertex a, b;
+
         double calcLength() {
-            return sqrt(double((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y) + (a.z - b.z) * (a.z - b.z)));
+            return sqrt(double((a.getX() - b.getX()) * (a.getX() - b.getX()) + (a.getY()- b.getY()) * (a.getY() - b.getY()) + (a.getZ() - b.getZ()) * (a.getZ() - b.getZ())));
         }
 };
 
@@ -60,9 +119,9 @@ class Object2D {
             double x, y, z;
             x = y = z = 0;
             for (int i = 0; i < vertices.size(); i++) {
-                x += vertices[i].x;
-                y += vertices[i].y;
-                z += vertices[i].y;
+                x += vertices[i].getX();
+                y += vertices[i].getY();
+                z += vertices[i].getZ();
             }
             return Vertex(x/vertices.size(), y/vertices.size(), z/vertices.size());
         }

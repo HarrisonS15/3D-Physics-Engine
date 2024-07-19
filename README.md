@@ -25,3 +25,5 @@ My journey learning to create a 3D physics engine from scratch in C++
     - builds cmake
   - ctest (from build dir)
     - runs all tests
+  - .\Debug\src_main.exe (from build dir)
+    - debugs and runs the program

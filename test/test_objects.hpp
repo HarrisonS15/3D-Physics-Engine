@@ -8,18 +8,18 @@
     Vertex v2 = Vertex(9,7,8);
     Vertex vertexMidPoint =  v1.getMidPoint(v2);
 TEST_CASE( "Test Vertex Constructor", "[vertex]" ) {
-    REQUIRE(v1.x == 1);
-    REQUIRE(v1.y == 2);
-    REQUIRE(v1.z == 3);
-    REQUIRE(v2.x == 9);
-    REQUIRE(v2.y == 7);
-    REQUIRE(v2.z == 8);
+    REQUIRE(v1.getX() == 1);
+    REQUIRE(v1.getY() == 2);
+    REQUIRE(v1.getZ() == 3);
+    REQUIRE(v2.getX() == 9);
+    REQUIRE(v2.getY() == 7);
+    REQUIRE(v2.getZ() == 8);
 }
 
 TEST_CASE( "Test Vertex getMidPoint", "[vertex.getMidPoint]" ) {
-    REQUIRE(vertexMidPoint.x == 5);
-    REQUIRE(vertexMidPoint.y == 4.5);
-    REQUIRE(vertexMidPoint.z == 5.5);
+    REQUIRE(vertexMidPoint.getX() == 5);
+    REQUIRE(vertexMidPoint.getY() == 4.5);
+    REQUIRE(vertexMidPoint.getZ() == 5.5);
 }
 
 // Line Tests
@@ -27,23 +27,23 @@ TEST_CASE( "Test Vertex getMidPoint", "[vertex.getMidPoint]" ) {
     Line line2 = Line(Vertex(15,-9,0), Vertex(-13,-4,-1));
 
 TEST_CASE( "Test Line Constructor", "[line]" ) {
-    REQUIRE(line.a.x == 7);
-    REQUIRE(line.a.y == 4);
-    REQUIRE(line.a.z == 3);
-    REQUIRE(line.b.x == 17);
-    REQUIRE(line.b.y == 6);
-    REQUIRE(line.b.z == 2);
+    REQUIRE(line.getVertexA().getX() == 7);
+    REQUIRE(line.getVertexA().getY() == 4);
+    REQUIRE(line.getVertexA().getZ() == 3);
+    REQUIRE(line.getVertexB().getX() == 17);
+    REQUIRE(line.getVertexB().getY() == 6);
+    REQUIRE(line.getVertexB().getZ() == 2);
 }
+
 TEST_CASE( "Test Line length", "[line]" ) {
-    std::cout << line.length << " " << std::round(line.length/1)*1;
-    REQUIRE(std::round(line.length/1)*1 == 10.246951);
+    REQUIRE(std::round(line.getLength()/0.00001)*0.00001 == std::round(10.246951/0.00001)*0.00001);
 }
 
 TEST_CASE( "Test Line getCenterOfLine", "[line.getCenterOfLine]" ) {
     Vertex centerVertex = line2.getCenterOfLine();
-    REQUIRE(centerVertex.x == 1);
-    REQUIRE(centerVertex.y == -6.5);
-    REQUIRE(centerVertex.z == -0.5);
+    REQUIRE(centerVertex.getX() == 1);
+    REQUIRE(centerVertex.getY() == -6.5);
+    REQUIRE(centerVertex.getZ() == -0.5);
 }
 // Object2D Tests
 
