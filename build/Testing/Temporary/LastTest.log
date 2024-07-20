@@ -1,34 +1,34 @@
-Start testing: Jul 18 18:39 Eastern Daylight Time
+Start testing: Jul 20 11:35 Eastern Daylight Time
 ----------------------------------------------------------
-1/6 Testing: Test Vertex Constructor
-1/6 Test: Test Vertex Constructor
+1/7 Testing: Test Vertex Constructor
+1/7 Test: Test Vertex Constructor
 Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "Test Vertex Constructor"
 Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
-"Test Vertex Constructor" start time: Jul 18 18:39 Eastern Daylight Time
+"Test Vertex Constructor" start time: Jul 20 11:35 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Test Vertex Constructor"
-Randomness seeded to: 1825070891
+Randomness seeded to: 3386750382
 ===============================================================================
 All tests passed (6 assertions in 1 test case)
 
 <end of output>
-Test time =   0.02 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"Test Vertex Constructor" end time: Jul 18 18:39 Eastern Daylight Time
+"Test Vertex Constructor" end time: Jul 20 11:35 Eastern Daylight Time
 "Test Vertex Constructor" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/6 Testing: Test Vertex getMidPoint
-2/6 Test: Test Vertex getMidPoint
+2/7 Testing: Test Vertex getMidPoint
+2/7 Test: Test Vertex getMidPoint
 Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "Test Vertex getMidPoint"
 Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
-"Test Vertex getMidPoint" start time: Jul 18 18:39 Eastern Daylight Time
+"Test Vertex getMidPoint" start time: Jul 20 11:35 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Test Vertex getMidPoint"
-Randomness seeded to: 3546755225
+Randomness seeded to: 2134226579
 ===============================================================================
 All tests passed (3 assertions in 1 test case)
 
@@ -36,19 +36,19 @@ All tests passed (3 assertions in 1 test case)
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Test Vertex getMidPoint" end time: Jul 18 18:39 Eastern Daylight Time
+"Test Vertex getMidPoint" end time: Jul 20 11:35 Eastern Daylight Time
 "Test Vertex getMidPoint" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/6 Testing: Test Line Constructor
-3/6 Test: Test Line Constructor
+3/7 Testing: Test Line Constructor
+3/7 Test: Test Line Constructor
 Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "Test Line Constructor"
 Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
-"Test Line Constructor" start time: Jul 18 18:39 Eastern Daylight Time
+"Test Line Constructor" start time: Jul 20 11:35 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Test Line Constructor"
-Randomness seeded to: 1178000397
+Randomness seeded to: 1109243475
 ===============================================================================
 All tests passed (6 assertions in 1 test case)
 
@@ -56,19 +56,19 @@ All tests passed (6 assertions in 1 test case)
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Test Line Constructor" end time: Jul 18 18:39 Eastern Daylight Time
+"Test Line Constructor" end time: Jul 20 11:35 Eastern Daylight Time
 "Test Line Constructor" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/6 Testing: Test Line length
-4/6 Test: Test Line length
+4/7 Testing: Test Line length
+4/7 Test: Test Line length
 Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "Test Line length"
 Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
-"Test Line length" start time: Jul 18 18:39 Eastern Daylight Time
+"Test Line length" start time: Jul 20 11:35 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Test Line length"
-Randomness seeded to: 2003773441
+Randomness seeded to: 3199719304
 ===============================================================================
 All tests passed (1 assertion in 1 test case)
 
@@ -76,19 +76,19 @@ All tests passed (1 assertion in 1 test case)
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Test Line length" end time: Jul 18 18:39 Eastern Daylight Time
+"Test Line length" end time: Jul 20 11:35 Eastern Daylight Time
 "Test Line length" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/6 Testing: Test Line getCenterOfLine
-5/6 Test: Test Line getCenterOfLine
+5/7 Testing: Test Line getCenterOfLine
+5/7 Test: Test Line getCenterOfLine
 Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "Test Line getCenterOfLine"
 Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
-"Test Line getCenterOfLine" start time: Jul 18 18:39 Eastern Daylight Time
+"Test Line getCenterOfLine" start time: Jul 20 11:35 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Test Line getCenterOfLine"
-Randomness seeded to: 2403624762
+Randomness seeded to: 3127499656
 ===============================================================================
 All tests passed (3 assertions in 1 test case)
 
@@ -96,19 +96,51 @@ All tests passed (3 assertions in 1 test case)
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Test Line getCenterOfLine" end time: Jul 18 18:39 Eastern Daylight Time
+"Test Line getCenterOfLine" end time: Jul 20 11:35 Eastern Daylight Time
 "Test Line getCenterOfLine" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/6 Testing: Test multiple files
-6/6 Test: Test multiple files
+6/7 Testing: Test Object2D getCentroid
+6/7 Test: Test Object2D getCentroid
+Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "Test Object2D getCentroid"
+Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
+"Test Object2D getCentroid" start time: Jul 20 11:35 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+Filters: "Test Object2D getCentroid"
+Randomness seeded to: 3612207366
+000
+-11-1
+02-2
+000
+000
+-11-1
+02-2
+000
+000
+-11-1
+02-2
+000
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"Test Object2D getCentroid" end time: Jul 20 11:35 Eastern Daylight Time
+"Test Object2D getCentroid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: Test multiple files
+7/7 Test: Test multiple files
 Command: "C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build/Debug/unit_tests.exe" "Test multiple files"
 Directory: C:/Users/Owner/Desktop/Projects/3D-Physics-Engine/build
-"Test multiple files" start time: Jul 18 18:39 Eastern Daylight Time
+"Test multiple files" start time: Jul 20 11:35 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Filters: "Test multiple files"
-Randomness seeded to: 871784904
+Randomness seeded to: 2346477396
 ===============================================================================
 All tests passed (1 assertion in 1 test case)
 
@@ -116,8 +148,8 @@ All tests passed (1 assertion in 1 test case)
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Test multiple files" end time: Jul 18 18:39 Eastern Daylight Time
+"Test multiple files" end time: Jul 20 11:35 Eastern Daylight Time
 "Test multiple files" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 18 18:39 Eastern Daylight Time
+End testing: Jul 20 11:35 Eastern Daylight Time

@@ -109,31 +109,10 @@ struct Line {
 };
 
 class Object2D {
-    private:
+    
+    protected:
         vector<Vertex> vertices;
-    public:
-        Object2D(Vertex vertices[]) {};
-        Object2D() {};
-        double calcArea() {};
-        Vertex getCentroid() {
-            double x, y, z;
-            x = y = z = 0;
-            for (int i = 0; i < vertices.size(); i++) {
-                x += vertices[i].getX();
-                y += vertices[i].getY();
-                z += vertices[i].getZ();
-            }
-            return Vertex(x/vertices.size(), y/vertices.size(), z/vertices.size());
-        }
-};
-
-class Triangle : Object2D {
-    private:
-        vector<Vertex> vertices = {Vertex(0, 0, 0), Vertex(1, 1, 0), Vertex(2, 2, 0)};
         vector<Line> sides;
-        Vertex midPoint;
-
-        /// @brief to be used in constructor only. (populates the Vector sides)
         void setSides() {
             sides = vector<Line>(vertices.size());
             for (int a = 0; a < vertices.size(); a++) {
@@ -141,20 +120,48 @@ class Triangle : Object2D {
                 sides[a] = Line(vertices[a], vertices[b]);
             }
         }
+    public:
+        Object2D(vector<Vertex> vertices) : vertices(vertices) {}
+        Object2D() {};
+
+        double calcArea() {};
+
+        Vertex getCentroid() {
+
+            double x, y, z;
+            x = y = z = 0;
+            for (int i = 0; i < this->vertices.size(); i++) {
+                x += this->vertices[i].getX();
+                y += this->vertices[i].getY();
+                z += this->vertices[i].getZ();
+            }
+            return Vertex(x/this->vertices.size(), y/this->vertices.size(), z/this->vertices.size());
+        }
+};
+
+class Triangle : public Object2D {
+    
+    protected:
+        
+        Vertex midPoint;
+
+        /// @brief to be used in constructor only. (populates the Vector sides)
+        
         
     public:
         /// @brief 
         /// @param vertices 
-        Triangle(Vertex vertices[]) {
+        Triangle(vector<Vertex> vertices) {
             try {
-                if (sizeof(vertices) != 3) {throw VerticeException();}
-                this->vertices = vector<Vertex>(vertices, vertices + sizeof(vertices) / sizeof(vertices[0]));
+                if (vertices.size() != 3) {throw VerticeException();}
+                this->vertices = vertices;
                 setSides();
             } catch (VerticeException ve) {
                 std::cout << ve.what() << std::endl;
             }
         }
         Triangle() {
+            this->vertices = vector<Vertex>{Vertex(-1,1,-1), Vertex(1,1,-1), Vertex(0,-2,2)};
             setSides();
         }
 

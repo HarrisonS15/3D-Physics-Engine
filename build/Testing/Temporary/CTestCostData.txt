@@ -4,10 +4,31 @@ Test 0 0
 Test 0 0
 Test 0 0
 Test 0 0
-Test Vertex Constructor 1 0.020569
-Test Vertex getMidPoint 1 0.0236829
-Test Line Constructor 1 0.0168919
-Test Line length 1 0.0169566
-Test Line getCenterOfLine 1 0.0155162
-Test multiple files 1 0.0164181
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test 0 0
+Test Vertex Constructor 1 0.0313832
+Test Vertex getMidPoint 1 0.021988
+Test Line Constructor 1 0.0153285
+Test Line length 1 0.0172948
+Test Line getCenterOfLine 1 0.0176209
+Test Object2D getCentroid 1 0.0184606
+Test multiple files 1 0.0162453
 ---

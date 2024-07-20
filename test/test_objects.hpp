@@ -47,4 +47,12 @@ TEST_CASE( "Test Line getCenterOfLine", "[line.getCenterOfLine]" ) {
 }
 // Object2D Tests
 
+TEST_CASE("Test Object2D getCentroid", "[Object2D.getCentroid]") {
+    vector<Vertex> vertices{Vertex(-1,1,-1), Vertex(1,1,-1), Vertex(0,-2,2)};
+    Triangle triangle = Triangle(vertices);
+    REQUIRE(triangle.getCentroid().getX() == 0);
+    REQUIRE(triangle.getCentroid().getY() == 0);
+    REQUIRE(triangle.getCentroid().getZ() == 0);
+    
+}
     //Triangle Tests
