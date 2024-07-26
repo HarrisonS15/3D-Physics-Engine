@@ -17,7 +17,7 @@ struct Vertex {
             z = 0.0;
         }
 
-        Vertex(double x, double y, double z) {
+        Vertex(float x, float y, float z) {
             this->x = x;
             this->y = y;
             this->z = z;
@@ -27,32 +27,38 @@ struct Vertex {
             return Vertex((x + v2.x)/2, (y + v2.y)/2, (z + v2.z)/2);
         }
 
-        double getX() {
+        float getX() {
             return x;
         }
 
-        double getY() {
+        float getY() {
             return y;
         }
 
-        double getZ() {
+        float getZ() {
             return z;
         }
 
-        void setX(double x) {
+        void setX(float x) {
             this->x = x;
         }
 
-        void setY(double y) {
+        void setY(float y) {
             this->y = y;
         }
 
-        void setZ(double z) {
+        void setZ(float z) {
+            this->z = z;
+        }
+
+        void setAll(float x, float y, float z)  {
+            this->x = x;
+            this->y = y;
             this->z = z;
         }
 
     private:
-        double x, y, z;
+        float x, y, z;
 };
 
 struct Line {
@@ -84,7 +90,7 @@ struct Line {
             this->a = a;
         }
 
-        void setVertexA(double x, double y, double z) {
+        void setVertexA(float x, float y, float z) {
             a = Vertex(x,y,z);
         }
 
@@ -92,19 +98,19 @@ struct Line {
             this->b = b;
         }
 
-        void setVertexB(double x, double y, double z) {
+        void setVertexB(float x, float y, float z) {
             b = Vertex(x,y,z);
         }
 
-        double getLength() {
+        float getLength() {
             return calcLength();
         }
     
     private:
         Vertex a, b;
 
-        double calcLength() {
-            return sqrt(double((a.getX() - b.getX()) * (a.getX() - b.getX()) + (a.getY()- b.getY()) * (a.getY() - b.getY()) + (a.getZ() - b.getZ()) * (a.getZ() - b.getZ())));
+        float calcLength() {
+            return sqrt(float((a.getX() - b.getX()) * (a.getX() - b.getX()) + (a.getY()- b.getY()) * (a.getY() - b.getY()) + (a.getZ() - b.getZ()) * (a.getZ() - b.getZ())));
         }
 };
 
@@ -124,30 +130,40 @@ class Object2D {
         Object2D(vector<Vertex> vertices) : vertices(vertices) {}
         Object2D() {};
 
-        double calcArea() {};
+        float calcArea() {};
+
+        int getNumVertices() {
+            return vertices.size();
+        }
 
         Vertex getCentroid() {
 
-            double x, y, z;
+            float x, y, z;
             x = y = z = 0;
-            for (int i = 0; i < this->vertices.size(); i++) {
-                x += this->vertices[i].getX();
-                y += this->vertices[i].getY();
-                z += this->vertices[i].getZ();
+            for (int i = 0; i < vertices.size(); i++) {
+                x += vertices[i].getX();
+                y += vertices[i].getY();
+                z += vertices[i].getZ();
             }
-            return Vertex(x/this->vertices.size(), y/this->vertices.size(), z/this->vertices.size());
+            return Vertex(x/vertices.size(), y/vertices.size(), z/vertices.size());
+        }
+
+        float* getVerticesAsArray() {
+            float* verticesArr = new float[vertices.size()*3];
+            for (int i = 0; i < vertices.size(); i++) {
+                int index = i*3;
+                verticesArr[index] = vertices[i].getX();
+                verticesArr[index+1] = vertices[i].getY();
+                verticesArr[index+2] = vertices[i].getZ();
+            }
+            return verticesArr;
         }
 };
 
 class Triangle : public Object2D {
     
     protected:
-        
-        Vertex midPoint;
 
-        /// @brief to be used in constructor only. (populates the Vector sides)
-        
-        
     public:
         /// @brief 
         /// @param vertices 
@@ -160,12 +176,18 @@ class Triangle : public Object2D {
                 std::cout << ve.what() << std::endl;
             }
         }
+
+        Triangle(Vertex v1, Vertex v2, Vertex v3) {
+            this->vertices = vector<Vertex>{v1, v2, v3};
+            setSides();
+        }
+
         Triangle() {
             this->vertices = vector<Vertex>{Vertex(-1,1,-1), Vertex(1,1,-1), Vertex(0,-2,2)};
             setSides();
         }
 
-        double calcArea() {
+        float calcArea() {
             // vertices[0].x;
             // 0.5*abs(vertices[0].x*(vertices[1].y));
             return 0;
